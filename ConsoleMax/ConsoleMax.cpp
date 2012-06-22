@@ -80,7 +80,7 @@ BOOL SetConsoleWindowSize(HANDLE hOutput, COORD size)
 	}
 
 	info.dwSize.X = size.X;
-	info.dwSize.Y = size.Y;
+	// info.dwSize.Y = size.Y;	// Should not set this, as this is the buffer size, setting this to the maximum window height will basically remove the vertical scrollbar.
 	if (!SetConsoleScreenBufferInfoEx(hOutput, &info)){
 		return FALSE;
 	}
