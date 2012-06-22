@@ -1,0 +1,1 @@
+Maximize current console window on current monitor; can also pass an optional numeric index to specify another monitor (1 means second monitor).
